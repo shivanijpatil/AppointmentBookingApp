@@ -214,7 +214,7 @@ mongoose
   })
   .catch((err) => console.error('MongoDB connection error:', err));
 
-// Graceful Shutdown
+
 process.on('SIGINT', async () => {
   console.log('Shutting down gracefully...');
   await mongoose.connection.close();
